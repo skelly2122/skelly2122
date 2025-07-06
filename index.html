@@ -1,107 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sam Kelly's Website</title>
-    <style>
-        /* Basic Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Body styling */
-        body {
-            background-color: #1e1e1e; /* Dark mode aesthetic */
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
-
-        /* Header section */
-        header {
-            max-width: 700px;
-            margin: 20px auto;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-        }
-
-        h1 {
-            font-size: 2rem;
-            margin-bottom: 10px;
-            color: #f5a623; /* Warm accent color */
-        }
-
-        p {
-            margin: 10px 0;
-            font-size: 1.1rem;
-        }
-
-        /* Style links as buttons */
-        a {
-            color: #fff;
-            text-decoration: none;
-            background: #f5a623;
-            padding: 8px 12px;
-            border-radius: 5px;
-            display: inline-block;
-            margin: 5px;
-            transition: 0.3s ease-in-out;
-        }
-
-        a:hover {
-            background: #d48920;
-        }
-
-        /* Image styling */
-        img {
-            width: 80%;
-            max-width: 400px;
-            border-radius: 10px;
-            margin-top: 15px;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-        }
-
-        /* Navigation bar */
-        .nav {
-            margin-bottom: 20px;
-        }
-
-        .nav a {
-            display: inline-block;
-            padding: 10px;
-            font-size: 1.2rem;
-            background: #444;
-            border-radius: 5px;
-        }
-
-        .nav a:hover {
-            background: #666;
-        }
-    </style>
+        <meta charset="utf-8"> <!-- Fixed typo in charset -->
+        <meta charsets="vtf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Welcome to Sam Kelly's website">
+        <title>Sam Kelly's Website</title>
+        <style>
+            #map {
+                height: 400px;
+                width: 100%;
+                margin-top: 20px;
+            }
+        </style>
+        <meta name="description" content="">
+        <title></title>
 </head>
 <body>
+<header>
+            <h1>Sam Kelly's Website</h1>
+            <p>Check out my clothes 4 sale <a href="https://www.depop.com/skelly2122/" target="_blank">[depop shop]</a></p>
+            <p>Check out my YouTube channel <a href="https://www.youtube.com/channel/UC7Jqu67EwH6DqiaSBKTxxTQ" target="_blank">[my youtube]</a></p>
+            <h1>Sam Kelly's website</h1>
+            <p>Check out my clothes 4 sale<a href="https://www.depop.com/skelly2122/" target=
+                "_blank">[depop shop]</a></p>
+            <p>Check out my youtube channel <a href="https://www.youtube.com/channel/UC7Jqu67EwH6DqiaSBKTxxTQ" target=
+                "_blank">[my youtube]</a></p>
+<p>Where I dump all my music stuff <a href="https://soundcloud.com/user-914092597" target="_blank">[music dump]</a></p>
+            <p>Add my Discord if you play any videogames or send music: @vanillalush</p>
+            <p>Add my discord if you play any videogames or send music: @vanillalush </p>
+<p>
+<img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back.">
+</p>
+<p>
+                <img src="https://pbs.twimg.com/media/EyVA0nzWYAgl6g8.jpg" alt="Yung Lean">
+                <img src="https://pbs.twimg.com/media/EyVA0nzWYAgl6g8.jpg" alt="Yung lean">
+</p>
+            
+</header>
 
-    <header>
-        <h1>Sam Kelly's Website</h1>
-        
-        <div class="nav">
-            <a href="https://www.depop.com/skelly2122/" target="_blank">Depop Shop</a>
-            <a href="https://www.youtube.com/channel/UC7Jqu67EwH6DqiaSBKTxxTQ" target="_blank">YouTube</a>
-            <a href="https://soundcloud.com/user-914092597" target="_blank">Music Dump</a>
-        </div>
+<main>
+            <h2>My Location</h2>
+            <p>Here's a map of where I'm at or a cool place to check out:</p>
+            <div id="map"></div>
+</main>
 
-        <p>Add me on Discord: <strong>@vanillalush</strong></p>
+        <!-- Google Maps API Script -->
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDIdLn8RiedfRi3PnqwKDCjwgAcQhM3EPs&callback=initMap" async defer></script>
+        <script>
+            function initMap() {
+                var location = { lat: 29.9395, lng: -90.1200 }; // Example: Tulane University
+                var map = new google.maps.Map(document.getElementById("map"), {
+                    zoom: 15,
+                    center: location
+                });
 
-        <!-- Image Gallery -->
-        <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back.">
-        <img src="https://pbs.twimg.com/media/EyVA0nzWYAgl6g8.jpg" alt="Yung Lean">
-    </header>
-
+                var marker = new google.maps.Marker({
+                    position: location,
+                    map: map,
+                    title: "Tulane University"
+                });
+            }
+        </script>
 </body>
 </html>
